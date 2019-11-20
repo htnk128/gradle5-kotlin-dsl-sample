@@ -1,5 +1,5 @@
-# gradle5-sample
-Gradle5のマルチモジュールプロジェクトサンプル
+# gradle5-kotlin-dsl-sample
+Gradle5でKotlin DSLを使ったマルチモジュールプロジェクトサンプル
 
 # Build Application
 
