@@ -3,7 +3,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "gradle5-sample"
+rootProject.name = "gradle5-kotlin-dsl-sample"
 
 include(":module1")
 include(":module2")

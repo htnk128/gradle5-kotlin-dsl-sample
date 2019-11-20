@@ -30,13 +30,9 @@ allprojects {
             reporter(ReporterType.CHECKSTYLE)
 
             customReporters {
-                register("csv") {
-                    fileExtension = "csv"
-                    dependency = project(":project-reporters:csv-reporter")
-                }
-                register("yaml") {
-                    fileExtension = "yml"
-                    dependency = "com.example:ktlint-yaml-reporter:1.0.0"
+                register("html") {
+                    fileExtension = "html"
+                    dependency = "me.cassiano:ktlint-html-reporter:0.2.3"
                 }
             }
         }
