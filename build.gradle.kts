@@ -19,13 +19,27 @@ allprojects {
     }
 
     ktlint {
-        version.set("0.32.0")
+        version.set(Versions.ktlintCore)
         debug.set(false)
         verbose.set(false)
         android.set(false)
         outputToConsole.set(true)
-        reporters.set(setOf(ReporterType.PLAIN, ReporterType.CHECKSTYLE))
         ignoreFailures.set(false)
+        reporters {
+            reporter(ReporterType.PLAIN)
+            reporter(ReporterType.CHECKSTYLE)
+
+            customReporters {
+                register("csv") {
+                    fileExtension = "csv"
+                    dependency = project(":project-reporters:csv-reporter")
+                }
+                register("yaml") {
+                    fileExtension = "yml"
+                    dependency = "com.example:ktlint-yaml-reporter:1.0.0"
+                }
+            }
+        }
     }
 
     tasks {

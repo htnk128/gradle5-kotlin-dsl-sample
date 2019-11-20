@@ -47,7 +47,7 @@ fun DependencyHandler.jacksonDependencies() {
 fun DependencyHandler.sqlDependencies() {
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:${Versions.mybatisSpringBootStarter}")
     runtimeOnly("mysql:mysql-connector-java:${Versions.mysqlDriver}")
-    testRuntimeOnly("com.h2database:h2")
+    testRuntimeOnly("com.h2database:h2:${Versions.h2}")
 }
 
 fun DependencyHandler.flywayDependencies() {
